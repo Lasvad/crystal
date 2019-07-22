@@ -293,6 +293,7 @@ struct BigFloat < Float
       io << cstr[i].unsafe_chr
     end
     (expptr - length).times { io << 0 } if expptr > 0
+    io << ".0" if expptr == length
   end
 
   def clone
